@@ -4,6 +4,7 @@ using System.Collections;
 public class BaseRotateTurret : MonoBehaviour {
 	private Transform[] transforms;
 	protected Transform turret;
+	protected Transform nozzle;
 	protected Vector3 targetPos;
 
 
@@ -19,6 +20,10 @@ public class BaseRotateTurret : MonoBehaviour {
 			{
 				turret = t;
 				turretFound = true;
+			}
+			if(t.gameObject.name == "nozzle")
+			{
+				nozzle = t;
 			}
 		}
 		if (!turretFound) 
